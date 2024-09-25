@@ -1,0 +1,1 @@
+The HemCare app is designed to efficiently manage patient records for individuals with hemophilia, a bleeding disorder. This application is developed using React Native and Expo, leveraging modern mobile development frameworks to ensure a seamless user experience and robust performance.
