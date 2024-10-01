@@ -1,5 +1,7 @@
 import { View, Text, TouchableOpacity} from "react-native";
+import React, { useState } from 'react';
 import Svg, { Path} from 'react-native-svg';
+import RecordBleed from "./modal-screens/record-bleed";
 
 const BleedIcon = ({color, width, height}) => {
     return(
@@ -27,12 +29,14 @@ const ProphylexisIcon = () => {
 }
 
 const AddTabPopup = () => {
+
+    const [isModalVisible, setIsModalVisible] = useState(false);
     
     return(
         <View className="absolute bottom-0 left-0 right-0 bg-[#151F3199] items-center justify-end w-full h-full z-10">
             <View className="bg-white rounded-[20px] py-4 px-3 items-start w-52 mb-24">
                 <View className="absolute -bottom-2.5 left-[95px] w-5 h-5 bg-white rotate-45"/>
-                <TouchableOpacity className="bg-gray-light p-1.5 rounded-[20px] flex flex-row items-center justify-start w-full">
+                <TouchableOpacity onPress={() => setIsModalVisible(true)} className="bg-gray-light p-1.5 rounded-[20px] flex flex-row items-center justify-start w-full">
                     <View className="w-8 h-8 rounded-full bg-red-light items-center justify-center">
                         <BleedIcon width="14px" height="17px" color="#F43F5E" />
                     </View>
@@ -51,6 +55,10 @@ const AddTabPopup = () => {
                     <Text className="text-gray-dark text-sm leading-4 ml-[8px]">Add Prophylaxis</Text>
                 </TouchableOpacity>
             </View>
+            <RecordBleed 
+                visible={isModalVisible} 
+                onClose={() => setIsModalVisible(false)} 
+            />
         </View>
     )
 }

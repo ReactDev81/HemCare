@@ -49,7 +49,7 @@ const Register = () => {
                 validationSchema={userSchema}
             >
                 {({handleChange, handleBlur, handleSubmit, values, errors}) => (
-                    <View className="w-full">
+                    <View className="w-full mt-10">
                         <Select 
                             value={selectedValue}
                             setValue={(value) => {
@@ -63,20 +63,25 @@ const Register = () => {
                             ]}
                         />
                         {errors.hemophiliaType && <Text className="pt-1.5 text-red-dark">{errors.hemophiliaType}</Text>}
-                        <Input 
-                            placeholder="Full Name" 
-                            value={values.name} 
-                            setValue={handleChange('name')}
-                            onBlur={handleBlur('name')}
-                        />
-                        {errors.name && <Text className="pt-1.5 text-red-dark">{errors.name}</Text>}
-                        <Input 
-                            placeholder="Email Address"
-                            value={values.email}
-                            setValue={handleChange('email')}
-                            onBlur={handleBlur('email')}
-                        />
-                        {errors.email && <Text className="pt-1.5 text-red-dark">{errors.email}</Text>}
+                        <View className="mt-5">
+                            <Input 
+                                placeholder="Full Name" 
+                                value={values.name} 
+                                setValue={handleChange('name')}
+                                onBlur={handleBlur('name')}
+                            />
+                            {errors.name && <Text className="pt-1.5 text-red-dark">{errors.name}</Text>}
+                        </View>
+                        
+                        <View className="mt-5">
+                            <Input 
+                                placeholder="Email Address"
+                                value={values.email}
+                                setValue={handleChange('email')}
+                                onBlur={handleBlur('email')}
+                            />
+                            {errors.email && <Text className="pt-1.5 text-red-dark">{errors.email}</Text>}
+                        </View>
                         <PasswordInput 
                             value={values.password} 
                             setValue={handleChange('password')}

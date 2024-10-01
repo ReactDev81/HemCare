@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "hemo-care-kit",
+    "name": "HemCare",
     "slug": "hemcare",
-    "scheme": "hemo-care-kit",
+    "scheme": "HemCare",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/logo.png",
@@ -27,7 +27,8 @@
       "favicon": "./assets/favicon-filled.png"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "expo-font"
     ],
     "extra": {
       "router": {

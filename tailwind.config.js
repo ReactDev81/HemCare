@@ -32,7 +32,7 @@ module.exports = {
         }
       },
       fontFamily: {
-        'figtree': ['Figtre', 'system-ui'],
+        'figtree': ['Figtree-400', 'Figtree-600', 'Figtree-700'],
       }
     },
   },

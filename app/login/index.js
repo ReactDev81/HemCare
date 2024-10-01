@@ -42,7 +42,7 @@ const Login = () => {
                 validationSchema={userSchema}
             >
                 {({handleChange, handleBlur, handleSubmit, values, errors}) => (
-                    <View className="w-full">
+                    <View className="w-full mt-5">
                         <Input 
                             placeholder="Email Address"
                             value={values.email}
@@ -56,7 +56,7 @@ const Login = () => {
                             onBlur={handleBlur('password')}
                         />
                         {errors.password && <Text className="pt-1.5 text-red-dark">{errors.password}</Text>}
-                        <Link href="/" className="text-right text-xs text-red-dark mt-2.5">Forgot Password</Link>
+                        <Link href="/home" className="text-right text-xs text-red-dark mt-2.5">Forgot Password</Link>
                         <FlatButton onPress={handleSubmit} text="Login" classname="mt-10 bg-red-dark" />
                     </View>
                 )}

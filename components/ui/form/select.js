@@ -6,7 +6,7 @@ import { Picker } from '@react-native-picker/picker';
 const Select = ({setValue, value, placeholder, items}) => {
     const [isFocused, setIsFocused] = useState(false);
     return (
-      <View className={`relative flex justify-center border border-solid rounded-[10px] py-0.5 px-0.5 bg-transparent mt-10 ${isFocused ? 'border-green-dark' : 'border-gray-dark'}`}>
+      <View className={`relative flex justify-center border border-solid rounded-[10px] py-0.5 px-0.5 bg-transparent ${isFocused ? 'border-green-dark' : 'border-gray-dark'}`}>
         <Picker
           selectedValue={value}
           onValueChange={setValue}
